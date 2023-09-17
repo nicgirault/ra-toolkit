@@ -30,6 +30,7 @@ export const EnumField: React.FC<EnumFieldProps> = ({ source, options, sx }) => 
 
   const  propsColor = option?.color ?? grey
   const color = typeof propsColor === 'string' ? propsColor : propsColor['800']
+
   const backgroundColor = typeof propsColor === 'string' ? propsColor + '52' : propsColor['100']
 
   return (
@@ -50,7 +51,7 @@ export const EnumField: React.FC<EnumFieldProps> = ({ source, options, sx }) => 
       onDelete={option?.description ? () => {} : undefined}
       deleteIcon={
         option?.description ? <Tooltip title={option?.description} followCursor>
-          <HelpIcon />
+          <HelpIcon  />
         </Tooltip> : undefined
       }
     />
